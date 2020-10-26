@@ -1,0 +1,19 @@
+dist: xenial
+addons:
+  sonarcloud:
+    organization: "muttalebm" # the key of the org you chose at step #3
+    token:
+      secure: "b420a716854d08437458f7811c834d18d4b857c1" # encrypted value of your token
+language: nodejs
+
+before_script:
+  - npm run setup
+  - npm run build
+
+script:
+  - npm run test-only
+  - sonar-scanner
+
+after_success:
+  - npm run typedoc
+  - npm pack
