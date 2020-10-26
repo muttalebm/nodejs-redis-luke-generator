@@ -1,12 +1,12 @@
 {
   "name": "redis-luke-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple function to create Redis Luke files",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": "muttalebm",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
