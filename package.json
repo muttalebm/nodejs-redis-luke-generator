@@ -7,6 +7,12 @@
   "scripts": {
     "test": "mocha"
   },
+  "keywords": [
+    "nodejs",
+    "redis",
+    "luke protocol",
+    "mass insert"
+  ],
   "author": "muttalebm",
   "license": "ISC",
   "devDependencies": {
