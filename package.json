@@ -1,6 +1,6 @@
 {
   "name": "redis-luke-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple function to create Redis Luke files",
   "main": "index.js",
   "homepage": "https://github.com/muttalebm/nodejs-redis-luke-generator",
