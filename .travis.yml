@@ -1,19 +1,19 @@
 dist: xenial
 addons:
   sonarcloud:
-    organization: "muttalebm" # the key of the org you chose at step #3
+    organization: muttalebm
     token:
-      secure: "b420a716854d08437458f7811c834d18d4b857c1" # encrypted value of your token
+      secure: r1kIqo+gEGRp7TwcWbakrvlK0HvGMpVrbmn6+cDoa2tg0O/sbp7BQtCbGOt3lqn6jvtz5YyDrkAZeeDLGeL0tiazBSfd+QLoxNqZrWEXjyTT/P20WI2rkmC1jB0SMv13O5Fe3h3tW1xXzxZMAzhfiYafPN5jPFpCKRhtKHrdeumj5oX5T/MfMRVRHGFd4egVvIM9K2J28/B06Rs5WJf3MrmQ+PBoDgO7LAKdOlIDZn+dfBt+YediKYcyjKbKrw9w3x9SZXkOb7zDCvIezqp3oDaQJN0cZt86ba5vVIRbjBk/zURgtdXABhFJ1oIsIxUqlDqlCmKABENCICGeODNJGp+wXbBuPkxv7SrGvsldnTUNiaP8ZzYkkD49axaVul89NKgg/oihR+MvOs/aWHZ0YTgNkdTsJvoAaY+sLYekAzCPjfZaKP94sFEbHCxu9JZvA2l6UpxqRQQpvoacIqIn8UJRQb2bS9gcZFUTClAx/dmVQoU3/ZMVn6BEhNgzPndc508GQ1Kyv8nbedsX2faAH1GxCqiIfRbwMqJXlo59q4V7hrgtTo6aOdHpDOF/fOFQ01HlYlNrkqFjZlfLT4PKSTILGLB8jrVZYLcGpNWw/8gLdLVs9i3BvFzQVm/TI9yYCWZWyUf/84SWDERaWNMQ49mtDuhDT52FqhKbQufDGlA=
 language: nodejs
-
 before_script:
-  - npm run setup
-  - npm run build
-
+- npm run setup
+- npm run build
 script:
-  - npm run test-only
-  - sonar-scanner
-
+- npm run test-only
+- sonar-scanner
 after_success:
-  - npm run typedoc
-  - npm pack
+- npm run typedoc
+- npm pack
+env:
+  global:
+  - secure: r1kIqo+gEGRp7TwcWbakrvlK0HvGMpVrbmn6+cDoa2tg0O/sbp7BQtCbGOt3lqn6jvtz5YyDrkAZeeDLGeL0tiazBSfd+QLoxNqZrWEXjyTT/P20WI2rkmC1jB0SMv13O5Fe3h3tW1xXzxZMAzhfiYafPN5jPFpCKRhtKHrdeumj5oX5T/MfMRVRHGFd4egVvIM9K2J28/B06Rs5WJf3MrmQ+PBoDgO7LAKdOlIDZn+dfBt+YediKYcyjKbKrw9w3x9SZXkOb7zDCvIezqp3oDaQJN0cZt86ba5vVIRbjBk/zURgtdXABhFJ1oIsIxUqlDqlCmKABENCICGeODNJGp+wXbBuPkxv7SrGvsldnTUNiaP8ZzYkkD49axaVul89NKgg/oihR+MvOs/aWHZ0YTgNkdTsJvoAaY+sLYekAzCPjfZaKP94sFEbHCxu9JZvA2l6UpxqRQQpvoacIqIn8UJRQb2bS9gcZFUTClAx/dmVQoU3/ZMVn6BEhNgzPndc508GQ1Kyv8nbedsX2faAH1GxCqiIfRbwMqJXlo59q4V7hrgtTo6aOdHpDOF/fOFQ01HlYlNrkqFjZlfLT4PKSTILGLB8jrVZYLcGpNWw/8gLdLVs9i3BvFzQVm/TI9yYCWZWyUf/84SWDERaWNMQ49mtDuhDT52FqhKbQufDGlA=
