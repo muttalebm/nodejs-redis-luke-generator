@@ -1,6 +1,6 @@
 <testExecutions version="1">
-<file path="dist\test\tests.js">
-<testCase name="With proper syntax: should return -1 a string" duration="1"/>
+<file path="C:\xampp\htdocs\node-redis-luke-generator\dist\test\tests.js">
+<testCase name="With proper syntax: should return -1 a string" duration="2"/>
 <testCase name="With proper syntax: should start with *3" duration="0"/>
 <testCase name="With proper syntax: should return exactly &quot;*3
 $3
@@ -13,8 +13,8 @@ value
 <testCase name="With proper syntax: should return a string" duration="0"/>
 <testCase name="With proper syntax: should start with *5" duration="1"/>
 <testCase name="With proper syntax: should return exactly &apos;*5\r\n$3\r\nSET\r\n$3\r\nkey\r\n$5\r\nvalue\r\n$2\r\nEX\r\n$2\r\n60\r\n&apos;" duration="0"/>
-<testCase name="With proper syntax: should return a string" duration="0"/>
-<testCase name="With proper syntax: should start with *5" duration="1"/>
+<testCase name="With proper syntax: should return a string" duration="1"/>
+<testCase name="With proper syntax: should start with *5" duration="0"/>
 <testCase name="With proper syntax: should return exactly &quot;*5
 $3
 SET

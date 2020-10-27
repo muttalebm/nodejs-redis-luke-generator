@@ -16,12 +16,12 @@ module.exports = function (grunt) {
                     }
                 },
                 src: [
-                    'app/**/*.spec.js'
+                    './dist/test/*.js'
                 ]
             }
         }
     });
-
+    grunt.loadNpmTasks("grunt-ts");
     grunt.registerTask('default', 'mochaTest');
 
 };

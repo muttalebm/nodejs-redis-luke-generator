@@ -12,7 +12,7 @@
     "test-only-tsc": "mocha -r ts-node/register 'test/*.ts'",
     "pretest": "npm run build",
     "test": "npm run test-only",
-    "clean": "shx rm -rf node_modules/ dist/ docs/",
+    "clean": "shx rm -rf node_modules/ dist/ docs/ || true",
     "typedoc": "typedoc --out ./docs --mode modules --tsconfig ./tsconfig.json ./dev/src/",
     "posttypedoc": "shx cp .nojekyll docs/.nojekyll",
     "test-coverage-report": "mocha --reporter mocha-sonarqube-reporter ./dist/test --reporter-options output=xunit.xml\n"
@@ -24,7 +24,9 @@
     "@types/mocha": "^8.0.3",
     "chai": "^4.2.0",
     "grunt": "^1.3.0",
+    "grunt-cli": "^1.3.2",
     "grunt-mocha-test": "0.13.2",
+    "grunt-ts": "^6.0.0-beta.22",
     "mocha": "^8.2.0",
     "mocha-sonarqube-reporter": "^1.0.2",
     "rimraf": "^2.6.2",
@@ -32,5 +34,6 @@
     "ts-node": "^9.0.0",
     "typedoc": "^0.19.2",
     "typescript": "^4.0.3"
-  }
+  },
+  "dependencies": {}
 }
