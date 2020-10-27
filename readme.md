@@ -1,5 +1,5 @@
 # Redis Luke generator
-## A simple function to create Redis Luke files
+A simple function to create Redis Luke files
 
 
 [![Build Status](https://travis-ci.org/muttalebm/nodejs-redis-luke-generator.svg?branch=main)](https://travis-ci.org/muttalebm/nodejs-redis-luke-generator)
