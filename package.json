@@ -1,6 +1,6 @@
 {
   "name": "redis-luke-generator",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "main": "./dist/src/LukeGenerator.js",
   "types": "./dist/src/LukeGenerator.d.js",
