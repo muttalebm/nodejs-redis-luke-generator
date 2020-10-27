@@ -13,12 +13,12 @@ A simple function to create Redis Luke files
 ## Usage
 This package exports a function named generate. 
 ```javascript
-const generator= require('redis-luke-generator');
+const generator = require('redis-luke-generator').LukeGenerator;
 
-let luke_command=generator.generate(["SET", "foo", "bar"]); // need to pass the command in array format
+generator.generate(["SET","foo","bar"])
 
 console.log(luke_command);
 
-// *3\r\n$3\r\nSET\r\n$3\r\nfoo\r\n$3\r\nbar
+// *3\r\n$3\r\nSET\r\n$3\r\nfoo\r\n$3\r\nbar\r\n
 
 ```
