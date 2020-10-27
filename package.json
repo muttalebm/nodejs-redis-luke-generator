@@ -1,9 +1,9 @@
 {
   "name": "redis-luke-generator",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "",
   "main": "./dist/LukeGenerator.js",
-  "types": "./dist/LukeGenerator.d.js",
+  "types": "./dist/LukeGenerator.d.ts",
   "scripts": {
     "setup": "npm install",
     "build": "tsc",
@@ -18,7 +18,11 @@
     "posttypedoc": "shx cp .nojekyll docs/.nojekyll",
     "test-coverage-report": "mocha --reporter mocha-sonarqube-reporter ./dist/test --reporter-options output=xunit.xml\n"
   },
-  "keywords": ["redis","luke protocol","luke file"],
+  "keywords": [
+    "redis",
+    "luke protocol",
+    "luke file"
+  ],
   "author": "Abdul Muttaleb Maruf <ammaruf7@gmail.com>",
   "license": "ISC",
   "devDependencies": {

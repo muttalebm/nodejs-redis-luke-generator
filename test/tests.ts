@@ -1,11 +1,9 @@
 import {expect} from 'chai';
 import {LukeGenerator} from "../LukeGenerator";
 
-let generator = new LukeGenerator();
-
 describe("Returns a Luke Command for 'SET key value' ", () => {
     describe('With proper syntax', () => {
-        let basic = generator.generate(["SET", "key", "value"])
+        let basic = LukeGenerator.generate(["SET", "key", "value"])
         it('should return -1 a string', () => {
             expect(basic).to.be.an('string');
         });
@@ -19,7 +17,7 @@ describe("Returns a Luke Command for 'SET key value' ", () => {
 });
 describe("Returns a Luke Command for 'SET key value EX 60'", () => {
     describe('With proper syntax', () => {
-        let withExpiry = generator.generate(["SET", "key", "value", "EX", "60"])
+        let withExpiry = LukeGenerator.generate(["SET", "key", "value", "EX", "60"])
         it('should return a string', () => {
             expect(withExpiry).to.be.an('string');
         });
@@ -38,7 +36,7 @@ describe("Returns a Luke Command for 'SET key1 ${JSON.stringify({\"key\":\"value
             "key": "value",
             "foo": "bar"
         };
-        let jsonValue = generator.generate(["SET", "key1", JSON.stringify(data) , "EX","60"])
+        let jsonValue = LukeGenerator.generate(["SET", "key1", JSON.stringify(data) , "EX","60"])
         it('should return a string', () => {
             expect(jsonValue).to.be.an('string');
         });
