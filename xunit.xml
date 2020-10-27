@@ -9,7 +9,7 @@ $3
 key
 $5
 value
-&quot;" duration="1"/>
+&quot;" duration="0"/>
 <testCase name="With proper syntax: should return a string" duration="0"/>
 <testCase name="With proper syntax: should start with *5" duration="0"/>
 <testCase name="With proper syntax: should return exactly &apos;*5\r\n$3\r\nSET\r\n$3\r\nkey\r\n$5\r\nvalue\r\n$2\r\nEX\r\n$2\r\n60\r\n&apos;" duration="0"/>
@@ -26,6 +26,6 @@ $2
 EX
 $2
 60
-&quot;" duration="0"/>
+&quot;" duration="1"/>
 </file>
 </testExecutions>

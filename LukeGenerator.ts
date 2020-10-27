@@ -5,11 +5,13 @@ export class LukeGenerator {
         this.command = "";
     }
 
-    generate(_command: string): string {
+    generate(_command: Array<any>): string {
         this.command = "";
-        let segments = _command.split(" ");
-        this.command += "*" + segments.length + "\r\n";
-        for (let segment of segments) {
+        if (!_command) {
+            throw new Error("Command Cannot be empty");
+        }
+        this.command = "*" + _command.length + "\r\n";
+        for (let segment of _command) {
             this.command += "$" + segment.length + "\r\n" + segment + "\r\n";
         }
         return this.command;
