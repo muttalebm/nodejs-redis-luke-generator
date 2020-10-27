@@ -19,7 +19,7 @@
   },
   "author": "Abdul Muttaleb Maruf <ammaruf7@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {:wq
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
     "chai": "^4.2.0",
