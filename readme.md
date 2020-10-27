@@ -5,10 +5,10 @@
 ```npm install redis-luke-generator```
 ## Usage
 This package exports a function named generate. 
-```
+```javascript
 const generator= require('redis-luke-generator');
 
-let luke_command=generator.generate("SET foo bar");
+let luke_command=generator.generate(["SET", "foo", "bar"]); // need to pass the command in array format
 
 console.log(luke_command);
 
