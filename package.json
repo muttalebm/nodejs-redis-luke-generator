@@ -1,9 +1,9 @@
 {
   "name": "redis-luke-generator",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "",
-  "main": "./dist/src/LukeGenerator.js",
-  "types": "./dist/src/LukeGenerator.d.js",
+  "main": "./dist/LukeGenerator.js",
+  "types": "./dist/LukeGenerator.d.js",
   "scripts": {
     "setup": "npm install",
     "build": "tsc",
@@ -11,6 +11,7 @@
     "test-only": "mocha dist/test/ && npm run test-coverage-report",
     "test-only-tsc": "mocha -r ts-node/register 'test/*.ts'",
     "pretest": "npm run build",
+    "prepublish": "tsc",
     "test": "npm run test-only",
     "clean": "shx rm -rf node_modules/ dist/ docs/ || true",
     "typedoc": "typedoc --out ./docs --mode modules --tsconfig ./tsconfig.json ./dev/src/",
